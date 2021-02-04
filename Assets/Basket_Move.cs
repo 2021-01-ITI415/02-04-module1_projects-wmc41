@@ -21,4 +21,13 @@ public class Basket_Move : MonoBehaviour
         pos.x = mousePos3d.x;
         this.transform.position = pos;
     }
+
+    void OnCollisionEnter ( Collision coll)
+    {
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.tag == "Apple")
+        {
+            Destroy(collidedWith);
+        }
+    }
 }
