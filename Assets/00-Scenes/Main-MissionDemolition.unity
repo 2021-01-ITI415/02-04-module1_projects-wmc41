@@ -728,7 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabProjectile: {fileID: 7462008852200646739, guid: 8b5c96789ffd44f418ca782a2528321d, type: 3}
   velocityMult: 8
-  launchPoint: {fileID: 1528909293}
+  launchPoint: {fileID: 7462008852200646739, guid: 8b5c96789ffd44f418ca782a2528321d, type: 3}
   launchPos: {x: 0, y: 0, z: 0}
   projectile: {fileID: 0}
   aimingMode: 0
@@ -825,6 +825,7 @@ GameObject:
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
   - component: {fileID: 792234109}
+  - component: {fileID: 792234110}
   m_Layer: 0
   m_Name: _MainCamera
   m_TagString: MainCamera
@@ -912,6 +913,18 @@ MonoBehaviour:
   easing: 0.05
   minXY: {x: 0, y: 0}
   camZ: 0
+--- !u!114 &792234110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79902502f10a7c64997722727d3ca842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1243314909
 GameObject:
   m_ObjectHideFlags: 0
