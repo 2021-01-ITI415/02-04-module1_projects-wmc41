@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public enum GameMode
@@ -9,8 +10,7 @@ public enum GameMode
     levelEnd
 }
 
-public class Mission_Demolition : MonoBehaviour
-{
+public class Mission_Demolition : MonoBehaviour {
     static private Mission_Demolition S;
 
     [Header("Set in Inspector")]
@@ -48,12 +48,12 @@ public class Mission_Demolition : MonoBehaviour
         {
             Destroy(pTemp);
         }
-        castle = Instaniate<GameObject>(castles[level]);
+        castle = Instantiate<GameObject>(castles[level]);
         castle.transform.position = castlePos;
         shotsTaken = 0;
 
         SwitchView("wShow Both");
-        ProjectLine.S.Clear();
+        
 
         Goal.goalMet = false;
 
