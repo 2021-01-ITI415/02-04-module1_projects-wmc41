@@ -6,7 +6,7 @@ public class Player_Move : MonoBehaviour
 {
     public float speed;
     public float rotate_speed;
-    public float jumpforce;
+    public GameObject laserPrefab;
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -24,5 +24,11 @@ public class Player_Move : MonoBehaviour
 
         transform.Translate((translation * -1), 0, 0);
         transform.Rotate(0, rotation, 0);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject laserObject = Instantiate(laserPrefab);
+            laserObject.transform.position = transform.position + transform.forward;
+        }
     }
 }
