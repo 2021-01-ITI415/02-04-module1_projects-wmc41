@@ -6,6 +6,7 @@ public class Player_Move : MonoBehaviour
 {
     public float speed;
     public float rotate_speed;
+    public GameObject player;
     public GameObject laserPrefab;
     private Rigidbody rb;
 
@@ -28,7 +29,7 @@ public class Player_Move : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             GameObject laserObject = Instantiate(laserPrefab);
-            laserObject.transform.position += transform.position + transform.forward;
+            laserPrefab.transform.position += transform.position + transform.forward;
         }
     }
 }

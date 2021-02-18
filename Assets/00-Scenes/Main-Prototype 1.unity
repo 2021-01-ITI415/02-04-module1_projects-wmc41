@@ -357,7 +357,6 @@ GameObject:
   - component: {fileID: 792234108}
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
-  - component: {fileID: 792234109}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -430,19 +429,6 @@ Transform:
   m_Father: {fileID: 917905659}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 10, y: -90, z: 0}
---- !u!114 &792234109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792234105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639d3ff483b885d4bb7842594a6a2195, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 917905657}
 --- !u!1 &917905657
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,8 +492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc11e82cb7333534b9eba780558f28b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  rotate_speed: 10
+  speed: 25
+  rotate_speed: 60
+  player: {fileID: 917905657}
   laserPrefab: {fileID: 7753556140423142189, guid: cae3e5ba9a155434f9707da6dbc83486, type: 3}
 --- !u!1 &1026323794
 GameObject:
@@ -630,7 +617,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
