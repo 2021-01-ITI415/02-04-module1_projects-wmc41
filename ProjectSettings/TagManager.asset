@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Apple
   - Projectile
+  - Building
+  - Laser
   layers:
   - Default
   - TransparentFX
