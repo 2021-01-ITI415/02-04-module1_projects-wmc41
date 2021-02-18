@@ -931,9 +931,9 @@ MonoBehaviour:
   castlePos: {x: 0, y: 0, z: 0}
   castles: []
   level: 0
-  levelMax: 0
+  levelMax: 4
   shotsTaken: 0
-  castle: {fileID: 390196101055679107, guid: d2fe5e7a3287f84468d2ff3a92cb2122, type: 3}
+  castle: {fileID: 0}
   mode: 0
   showing: Show Slingshot
 --- !u!1 &1243314909

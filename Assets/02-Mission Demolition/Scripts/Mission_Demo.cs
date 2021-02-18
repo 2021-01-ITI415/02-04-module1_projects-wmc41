@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum GameMode
+public enum Game_Mode
 {
     idle,
     playing,
     levelEnd
 }
 
-public class Mission_Demolition : MonoBehaviour {
-    static private Mission_Demolition S;
+public class Mission_Demo : MonoBehaviour {
+    static private Mission_Demo S;
 
     [Header("Set in Inspector")]
     public Text uitLevel;
@@ -25,7 +25,7 @@ public class Mission_Demolition : MonoBehaviour {
     public int levelMax;
     public int shotsTaken;
     public GameObject castle;
-    public GameMode mode = GameMode.idle;
+    public Game_Mode mode = Game_Mode.idle;
     public string showing = "Show Slingshot";
 
     // Start is called before the first frame update
@@ -54,12 +54,11 @@ public class Mission_Demolition : MonoBehaviour {
 
         SwitchView("wShow Both");
         
-
         Goal.goalMet = false;
 
         UpdateGUI();
 
-        mode = GameMode.playing;
+        mode = Game_Mode.playing;
     }
 
     void UpdateGUI()
@@ -73,9 +72,9 @@ public class Mission_Demolition : MonoBehaviour {
     {
         UpdateGUI();
 
-        if ((mode == GameMode.playing) && Goal.goalMet)
+        if ((mode == Game_Mode.playing) && Goal.goalMet)
         {
-            mode = GameMode.levelEnd;
+            mode = Game_Mode.levelEnd;
             SwitchView("Show Both");
             Invoke("Next Level", 2f);
         }
