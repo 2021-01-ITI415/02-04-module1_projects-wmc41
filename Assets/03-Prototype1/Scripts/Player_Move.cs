@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Player_Move : MonoBehaviour
 {
+    public Camera MainCamera;
     public float speed;
     public float rotate_speed;
     public GameObject player;
     public GameObject laserPrefab;
     private Rigidbody rb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +30,9 @@ public class Player_Move : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject laserObject = Instantiate(laserPrefab);
-            laserPrefab.transform.position += transform.position + transform.forward;
+            GameObject laserObject = Instantiate(laserPrefab.gameObject);
+            laserObject.transform.position += MainCamera.transform.position + MainCamera.transform.forward;
+           
         }
     }
 }
